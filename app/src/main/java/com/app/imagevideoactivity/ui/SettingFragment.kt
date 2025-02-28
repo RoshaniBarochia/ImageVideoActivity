@@ -54,8 +54,15 @@ class SettingFragment : Fragment() {
         googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
         googleSignInClient!!.signOut().addOnCompleteListener {
             Toast.makeText(requireContext(), "Logged out!", Toast.LENGTH_SHORT).show()
+            revokeAccess()
         }
     }
+    private fun revokeAccess() {
+        googleSignInClient!!.revokeAccess().addOnCompleteListener {
+            Toast.makeText(context, "Access revoked!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
 
 

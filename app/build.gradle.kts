@@ -63,7 +63,6 @@ dependencies {
     implementation("com.google.apis:google-api-services-drive:v3-rev197-1.25.0")
     implementation("com.google.http-client:google-http-client-gson:1.43.3")
 
-    implementation(platform("com.google.api-client:google-api-client-bom:1.33.0"))
 
 
 

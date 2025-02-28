@@ -105,8 +105,6 @@ class AllDataFragment : Fragment() {
                 override fun onPermissionsChecked(report: MultiplePermissionsReport) {
                     // check if all permissions are granted
                     if (report.areAllPermissionsGranted()) {
-                        /*list.addAll(getData(requireContext()))
-                        list.addAll(getVideoList(requireContext()))*/
                         list.addAll(getAllMedia(requireContext()))
                         CoroutineScope(Dispatchers.IO).launch {
                             delay(2000)
